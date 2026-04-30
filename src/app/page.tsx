@@ -1,5 +1,4 @@
 import { Nav } from "@/components/nav";
-import { Hero } from "@/components/hero";
 import { SpecsStrip } from "@/components/specs-strip";
 import { Services } from "@/components/services";
 import { ForBuilders } from "@/components/for-builders";
@@ -12,7 +11,6 @@ export default function Home() {
   return (
     <>
       <Nav />
-      <Hero />
       <SpecsStrip />
       <Services />
       <ForBuilders />
