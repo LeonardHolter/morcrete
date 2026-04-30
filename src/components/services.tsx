@@ -1,5 +1,5 @@
+import Image from "next/image";
 import { ArrowRight } from "./icons";
-import { Placeholder } from "./placeholder";
 
 const services = [
   {
@@ -8,8 +8,7 @@ const services = [
     title: "Driveways",
     copy: "Production-grade pours sized for the lot plan and tied into the curb cut. Steel-reinforced, brushed or exposed-aggregate finishes, sized to the builder's spec.",
     specs: ["4\"–6\" slab", "Wire / rebar", "Broom · Float · Stamp"],
-    placeholder: "warm" as const,
-    kind: "DRIVEWAY",
+    image: "/flatwork_driveway.jpg",
   },
   {
     num: "02",
@@ -17,8 +16,7 @@ const services = [
     title: "Walkways",
     copy: "Front walks, side paths, lot connectors. Tight tolerances at door thresholds and between phases so you can hand the lot off without callbacks.",
     specs: ["ADA compliant", "Saw-cut joints", "Color match"],
-    placeholder: "cool" as const,
-    kind: "WALKWAY",
+    image: "/walkway_flatwork.jpg",
   },
   {
     num: "03",
@@ -26,8 +24,7 @@ const services = [
     title: "Patios",
     copy: "Backyard slabs spec'd to the floor-plan package. We pour after rough landscape, ahead of fence — without slowing your finish punch list.",
     specs: ["Stamped · Smooth", "Drainage slope", "Expansion seams"],
-    placeholder: "green-tint" as const,
-    kind: "PATIO",
+    image: "/patio.jpg",
   },
 ];
 
@@ -45,18 +42,18 @@ export function Services() {
               Flatwork, done&nbsp;right.
             </h2>
           </div>
-          <p>
-            We don&apos;t dig footings. We don&apos;t run excavation. Morcrete
-            pours residential flatwork for production homebuilders — and that
-            focus is why our crews finish a lot in a day, not a week.
-          </p>
         </div>
 
         <div className="services-grid">
           {services.map((s) => (
             <article key={s.num} className="service-card">
               <div className="service-image">
-                <Placeholder variant={s.placeholder} kind={s.kind} />
+                <Image
+                  src={s.image}
+                  alt={s.title}
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
                 <span className="service-num">{s.num} / 03</span>
                 <span className="service-tag">{s.tag}</span>
               </div>
