@@ -42,9 +42,7 @@ export function Services() {
               WHAT WE POUR
             </div>
             <h2 style={{ marginTop: 16 }}>
-              Three things, done&nbsp;right.
-              <br />
-              <span style={{ color: "var(--steel)" }}>Nothing else.</span>
+              Flatwork, done&nbsp;right.
             </h2>
           </div>
           <p>
